@@ -1,0 +1,28 @@
+body {
+	background: #3465a4;
+	background: -webkit-linear-gradient(#3465a4, #729fcf);
+	background: -o-linear-gradient(#3465a4, #729fcf);
+	background: -moz-linear-gradient(#3465a4, #729fcf);
+	background: linear-gradient(#3465a4, #729fcf);
+}
+
+.responsive {
+	max-width: 75%;
+	height: auto;
+}
+
+img {
+	padding: 15px;
+}
+
+.displayBox{
+	width: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scroll-box {
+	overflow-y: auto;
+	height: 500px;
+	float: left;
+	padding: 1rem;
+}
