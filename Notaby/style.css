@@ -1,9 +1,9 @@
 body {
-	background: #3465a4;
-	background: -webkit-linear-gradient(#3465a4, #729fcf);
-	background: -o-linear-gradient(#3465a4, #729fcf);
-	background: -moz-linear-gradient(#3465a4, #729fcf);
-	background: linear-gradient(#3465a4, #729fcf);
+	background: #0f4a97;
+	background: -webkit-linear-gradient(#0f4a97, #7b6a55);
+	background: -o-linear-gradient(#0f4a97, #7b6a55);
+	background: -moz-linear-gradient(#0f4a97, #7b6a55);
+	background: linear-gradient(#0f4a97, #7b6a55);
 }
 
 .responsive {
@@ -22,7 +22,7 @@ img {
 
 .scroll-box {
 	overflow-y: auto;
-	height: 500px;
+	height: 460px;
 	float: left;
 	padding: 1rem;
 }
