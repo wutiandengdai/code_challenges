@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Path2.0 : A Coding Challenge</title>
+  </head>
+
+  <body class="d-flex flex-column h-100" onload="displayGrid(grid1, 'Grid1-Default')">
+
+    <div class="container-fluid">
+        <nav class="nav">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a href="runner.html" class="nav-link">Runner</a>
+        </nav>
+        <div class="row mt-1 mx-auto">
+            <div class="col-md-4">
+                <!--Instructions of the coding challenge-->
+                <div class="card">
+                    <h3 class="card-header bg-primary text-white">Path2.0 Coding Challenge</h3>
+                    <div class="card-body">
+                        <!--description for coding challenge-->
+                        <div>  
+                            <p>You are given an R by C matrix consisting of booleans that represents a board. Each True
+                                boolean represents a wall. Each False boolean represents a tile you can walk on.</p>
+                            <p>Given this matrix, a start coordinate, and an end coordinate, return the minimum number
+                                of steps required to reach the end coordinate from the start. If there is no possible
+                                path, then return null. You can move up, left, down, and right. You cannot move through
+                                walls. You cannot wrap around the edges of the board. </p>
+                        </div>
+                        <div>
+                            <h6>For example, given the following board:</h6>
+                            <div class="card card-body card-text text-center gridstyle">
+                                [[f, f, f, f],<br>
+                                [t, t, f, t],<br>
+                                [f, f, f, f],<br>
+                                [f, f, f, f]]
+                            </div>
+                            <p>and start = (0, 0)(bottom left) and end = (3, 0)(top left), the minimum number of
+                                steps required to reach the end is 7, since we would need to go through (1, 2)
+                                because there is a wall everywhere else on the second row. <b><i>(Note* the displayed
+                                        grid is
+                                        inverted for display purposes so that row 0 is on the bottom)</i></b>
+                            </p>
+                             <div class="row">
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Pick a Grid
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <button class="dropdown-item" id="btnGrid3"
+                                                onclick="displayGrid(grid3,'Grid3-void')"
+                                                type="button">Grid3-Void</button>
+                                            <button class="dropdown-item" id="btnGrid4"
+                                                onclick="displayGrid(grid4,'Grid4-arc')"
+                                                type="button">Grid4-Arc</button>
+                                            <button class="dropdown-item" id="btnGrid5"
+                                                onclick="displayGrid(grid5,'Grid5-solar')"
+                                                type="button">Grid5-Solar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-primary" onclick="solveMazeZH()">Solve</button>
+                                </div>
+                            </div>
+                            <div class="row align-items-start">
+                                <div class="col align-self-start text-success mt-3 " id="results"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!--templates-->
+                <h1 id="gridTitle" colorValue="default">Grid 1- Default</h1>
+                <table id="gridDisplay" class="table h-100 gridStyle">
+                    <!--template for grid items-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="text-center">
+            <span class="text-muted">
+                Contact me on <a href="https://linkedin.com/in/lei-ye-07/">Linkedin</a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- load after page loads-->
+    <script src="template.js"></script>
+    <script src="runner.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
