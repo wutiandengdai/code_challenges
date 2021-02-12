@@ -45,19 +45,19 @@ a[class~="active"] {
     font-weight: bold;
 }
 
-[blockValue~="deadend"] {
+td[blockValue~="deadend"] {
     background-color: orange;
 }
 
-[blockValue~="path"] {
+td[blockValue~="path"] {
     background-color: darkgrey;
 }
 
-[blockValue~="wall"] {
+td[blockValue~="wall"] {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPgogIDxyZWN0IHdpZHRoPSc4JyBoZWlnaHQ9JzgnIGZpbGw9JyNmZmYnLz4KICA8cGF0aCBkPSdNMCAwTDggOFpNOCAwTDAgOFonIHN0cm9rZS13aWR0aD0nMC41JyBzdHJva2U9JyNhYWEnLz4KPC9zdmc+Cg==");
     background-repeat: repeat;
 }
 
-[blockValue~="step"] {
+td[blockValue~="step"] {
     background-color: cornflowerblue;
 }

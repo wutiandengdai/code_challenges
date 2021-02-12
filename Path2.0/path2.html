@@ -12,12 +12,12 @@
     <title>Path2.0 : A Coding Challenge</title>
   </head>
 
-  <body class="d-flex flex-column h-100" onload="displayGrid(grid1, 'Grid1-Default')">
+  <body class="d-flex flex-column h-100" onload="displayGrid(grid3, 'Grid3-void')">
 
     <div class="container-fluid">
         <nav class="nav">
-            <a class="nav-link active" href="#">Home</a>
-            <a href="path2.html" class="nav-link">Path2.0</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="#">Path2.0</a>
         </nav>
         <div class="row mt-1 mx-auto">
             <div class="col-md-4">
@@ -26,7 +26,7 @@
                     <h3 class="card-header bg-primary text-white">Path2.0 Coding Challenge</h3>
                     <div class="card-body">
                         <!--description for coding challenge-->
-                        <div>  
+                        <div>
                             <p>You are given an R by C matrix consisting of booleans that represents a board. Each True
                                 boolean represents a wall. Each False boolean represents a tile you can walk on.</p>
                             <p>Given this matrix, a start coordinate, and an end coordinate, return the minimum number
@@ -58,21 +58,24 @@
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <li>
-                                                <a class="dropdown-item" id="btnGrid1"
-                                                onclick="displayGrid(grid1,'grid1-default')"
-                                                href="#">Grid1-Default</a>
+                                                <a class="dropdown-item" id="btnGrid3"
+                                                onclick="displayGrid(grid3,'Grid3-void')"
+                                                href="#">Grid3-Void</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" id="btnGrid2"
-                                                onclick="displayGrid(grid2,'grid2-more complicated')"
-                                                thref="#">Grid2-More
-                                                Complicated</a>
+                                                <a class="dropdown-item" id="btnGrid4"
+                                                onclick="displayGrid(grid4,'Grid4-arc')"
+                                                href="#">Grid4-Arc</a>
+                                            <li>
+                                                <a class="dropdown-item" id="btnGrid5"
+                                                onclick="displayGrid(grid5,'Grid5-solar')"
+                                                href="#">Grid5-Solar</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-primary" style="float:right;" onclick="solve()">Solve</button>
+                                    <button class="btn btn-primary" style="float:right;" onclick="runnerSolve()">Solve</button>
                                 </div>
                             </div>
                             <div class="row align-items-start">
@@ -85,7 +88,7 @@
             </div>
             <div class="col-md-8">
                 <!--templates-->
-                <h1 id="gridTitle" colorValue="default">Grid 1- Default</h1>
+                <h1 id="gridTitle" colorValue="default">Grid3-void</h1>
                 <table id="gridDisplay" class="table h-75 gridStyle">
                     <!--template for grid items-->
                 </table>
