@@ -46,11 +46,11 @@ a[class~="active"] {
 }
 
 td[blockValue~="deadend"] {
-    background-color: orange;
+    background-color: darkgray;
 }
 
 td[blockValue~="path"] {
-    background-color: darkgrey;
+    background-color: orange;
 }
 
 td[blockValue~="wall"] {
