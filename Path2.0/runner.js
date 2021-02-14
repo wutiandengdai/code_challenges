@@ -79,36 +79,54 @@ function solve(){
 //No distance sort, start col and exit col won't be used.
 function solvePath(){
     var grid = cGrid;
-    const startRow = 0;
-    const exitRow = grid.length;
-    var curRow = 0;
-    var curCol = 0;
-    var prevRow = 0;
-    var prevCol = 0;
+    stepCount = 0;  //resetStep
+    startRow = 0;
+    exitRow = grid.length-1;
+    var point = {
+        row: 0,
+        col: 0
+    };
 
     //1. Loop start row , find the start col and mark
-    startRow = 0; 
-    exitRow = grid.length -1;
-    for ( ;curCol < grid[startRow].length; curCol++){
+    let startCol = point.col;
+    for ( ;startCol < grid[startRow].length; startCol++){
         noEntry = true;
-        if (grid[startRow][curCol] == colValues.OPEN){
-            curRow = startRow;
+        if (grid[startRow][startCol] == colValues.OPEN){
+            point.row = startRow;
+            point.col = startCol;
             noEntry = false;
             break;
         }
     }
     if(noEntry){
         writeResults();
-        return false;
+        return;
     }
     
+    //2. loop and find open path and mark as walked
+    do {
+        let step = {};
+        for( var direct in directions){
+            step = movable(point, grid, direct);
+            if(step.canMove && step.colValue == colValues.OPEN){
+                //mark current step as walked , move and add step count
+                grid[point.row][point.col] = colValues.PATH;
+                document.getElementById(`${point.row}:${point.col}`).setAttribute("blockValue", "step");
+                point = getNextPoint(point, direct);
+                stepCount ++;
+                break;
+            }
+        }
+        //3. Test exit condition
+        if ( point.row == exitRow){
+            exitReached = true;
+            grid[point.row][point.col] = colValues.PATH;
+            document.getElementById(`${point.row}:${point.col}`).setAttribute("blockValue", "step");
+            break;
+        }
+    } while(true);
 
-    //2. loop and find the path
-    
-
-    //3. mark path
-
-    //4. Test exit condition
+    writeResults();
 } 
 
 
